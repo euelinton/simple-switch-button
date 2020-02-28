@@ -1,0 +1,115 @@
+.switch__container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.switch {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+
+.switch + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+
+/* Switch Normal */
+
+.switch__normal {
+  margin-bottom: 20px;
+}
+
+.switch--shadow + label {
+  padding: 2px;
+  width: 120px;
+  height: 60px;
+  background-color: #dddddd;
+  border-radius: 60px;
+}
+
+.switch--shadow + label:before,
+.switch--shadow + label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  bottom: 1px;
+}
+
+.switch--shadow + label:before {
+  right: 1px;
+  background-color: #f1f1f1;
+  border-radius: 60px;
+  transition: all .4s;
+}
+
+.switch--shadow + label:after {
+  background-color: #fff;
+  border-radius: 100%;
+  transition: all .4s;
+  width: 62px;
+}
+
+.switch--shadow + label:after {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+}
+
+.switch--shadow:checked + label:before {
+  background-color: #8ce196;
+}
+
+.switch--shadow:checked + label:after {
+  transform: translateX(60px);
+}
+
+/* Switch Flat */
+
+.switch--flat + label {
+  padding: 2px;
+  width: 120px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 60px;
+  border: 2px solid #dddddd;
+}
+
+.switch--flat + label:before,
+.switch--flat + label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  bottom: 1px;
+}
+
+.switch--flat + label:before {
+  right: 1px;
+  background-color: #fff;
+  border-radius: 60px;
+  transition: all .4s;
+}
+
+.switch--flat + label:after {
+  margin: 2px;
+  background-color: #dddddd;
+  border-radius: 100%;
+  transition: all .4s;
+  width: 60px;
+}
+
+.switch--flat:checked + label:before {
+  background-color: #dddddd;
+}
+
+.switch--flat:checked + label:after {
+  background-color: #fff;
+  transform: translateX(58px);
+}
